@@ -1,0 +1,143 @@
+ [
+	  {
+		  "DAY_WEEK" : "Monday",
+		  "DATE" : "01 October 2018",
+		  "SCHEDULE" :  [
+			  {
+				  "SUBJECT" : "Biology",
+				  "TOPIC" : "Respiratory System",
+				  "CLASSROOM" : "Class 1A",
+				  "TIME_START" : "09:00",
+				  "TIME_END" : "10:15",
+				  "CLASS_FINISHED" : true
+			  },
+
+			  {
+				  "SUBJECT" : "Biology",
+				  "TOPIC" : "Anatomy 101",
+				  "CLASSROOM" : "Class 3C",
+				  "TIME_START" : "12:15",
+				  "TIME_END" : "13:00",
+				  "CLASS_FINISHED" : false
+			  }
+		  ]
+
+	  },
+
+	  {
+		  "DAY_WEEK" : "Tuesday",
+		  "DATE" : "02 October 2018",
+		  "CLASSES" :  [
+			  {
+				  "SUBJECT" : "Biology",
+				  "TOPIC" : "Respiratory System",
+				  "CLASSROOM" : "Class 1B",
+				  "TIME_START" : "09:00",
+				  "TIME_END" : "10:15",
+				  "CLASS_FINISHED" : false
+			  },
+			  {
+				  "SUBJECT" : "Biology",
+				  "TOPIC" : "Reproductive System",
+				  "CLASSROOM" : "Class 2A",
+				  "TIME_START" : "11:00",
+				  "TIME_END" : "12:15",
+				  "CLASS_FINISHED" : false
+			  },
+			  {
+				  "SUBJECT" : "Biology",
+				  "TOPIC" : "Reproductive System",
+				  "CLASSROOM" : "Class 2C",
+				  "TIME_START" : "13:15",
+				  "TIME_END" : "14:00",
+				  "CLASS_FINISHED" : false
+			  }
+		  ]
+	  },
+
+	 {
+		 "DAY_WEEK" : "Wednesday",
+		 "DATE" : "03 October 2018",
+		 "CLASSES" :  [
+
+			 {
+				 "SUBJECT" : "Biology",
+				 "TOPIC" : "Human Brain",
+				 "CLASSROOM" : "Class 3A",
+				 "TIME_START" : "11:00",
+				 "TIME_END" : "12:15",
+				 "CLASS_FINISHED" : false
+			 },
+
+			 {
+				 "SUBJECT" : "Biology",
+				 "TOPIC" : "Excretory System",
+				 "CLASSROOM" : "Class 2A",
+				 "TIME_START" : "13:00",
+				 "TIME_END" : "14:15",
+				 "CLASS_FINISHED" : false
+			 }
+
+
+		 ]
+	 },
+
+	 {
+		 "DAY_WEEK" : "Thursday",
+		 "DATE" : "04 October 2018",
+		 "CLASSES" :  [
+
+			 {
+				 "SUBJECT" : "Biology",
+				 "TOPIC" : "Human Brain",
+				 "CLASSROOM" : "Class 1A",
+				 "TIME_START" : "09:00",
+				 "TIME_END" : "10:15",
+				 "CLASS_FINISHED" : false
+			 },
+
+			 {
+				 "SUBJECT" : "Agriculture",
+				 "TOPIC" : "Africa Vegetation",
+				 "CLASSROOM" : "Class 2B",
+				 "TIME_START" : "13:15",
+				 "TIME_END" : "14:00",
+				 "CLASS_FINISHED" : false
+			 }
+
+
+		 ]
+	 },
+
+	 {
+		 "DAY_WEEK" : "Friday",
+		 "DATE" : "05 October 2018",
+		 "CLASSES" :  [
+			 {
+				 "SUBJECT" : "Biology",
+				 "TOPIC" : "Respiratory System",
+				 "CLASSROOM" : "Class 1B",
+				 "TIME_START" : "09:00",
+				 "TIME_END" : "10:15",
+				 "CLASS_FINISHED" : false
+			 },
+			 {
+				 "SUBJECT" : "Biology",
+				 "TOPIC" : "Reproductive System",
+				 "CLASSROOM" : "Class 2A",
+				 "TIME_START" : "11:00",
+				 "TIME_END" : "12:15",
+				 "CLASS_FINISHED" : false
+			 },
+			 {
+				 "SUBJECT" : "Biology",
+				 "TOPIC" : "Reproductive System",
+				 "CLASSROOM" : "Class 2C",
+				 "TIME_START" : "13:15",
+				 "TIME_END" : "14:00",
+				 "CLASS_FINISHED" : false
+			 }
+		 ]
+	 }
+
+ ]

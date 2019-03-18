@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardClassDataBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="@dimen/cardCurvedRadius"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/itemRowBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/text_margin"
+                android:paddingEnd="@dimen/text_margin"
+                android:paddingStart="@dimen/text_margin"
+                android:paddingTop="@dimen/text_margin">
+
+                <TextView
+                    android:id="@+id/txtSubjectName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light_font"
+                    android:text="@string/str_subject_example"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/forgot_pass_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtTopicName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_medium_font"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="@string/str_topic"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/input_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSubjectName" />
+
+                <TextView
+                    android:id="@+id/txtClassName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular_font"
+                    android:text="@string/str_class_name"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/forgot_pass_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTopicName" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

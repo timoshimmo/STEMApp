@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSuperLightGray">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="196dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsibleToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:collapsedTitleTextAppearance="@style/CollapsibleTitleStyle"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@style/CollapsibleTitleStyle"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <!--    app:layout_scrollInterpolator="@android:anim/decelerate_interpolator" -->
+
+            <ImageView
+                android:id="@+id/app_bar_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/main_appbar_image"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/sym_def_app_icon" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarClassDetails"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetEnd="@dimen/activity_horizontal_margin"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/btn_login_margin_top"
+            tools:context=".main.activity.ClassDetailsActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/classes_details_button_container_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTermName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp"
+                        android:layout_weight="0.8"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:gravity="top"
+                        android:textColor="@color/colorDarkGray"
+                        android:textSize="@dimen/assigned_topic_text_size"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtSubjectName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:gravity="top"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/colorDarkGray"
+                        android:textSize="@dimen/assigned_topic_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtClassName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/proxima_nova_semibold"
+                        android:gravity="bottom|end"
+                        android:textColor="@color/colorMidGray"
+                        android:textSize="@dimen/home_row_title_text_size"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="7dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtClassId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtClassDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textColor="@color/colorDarkGray"
+                        android:textSize="@dimen/btn_get_started_text_size"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtDuration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textColor="@color/colorBlueCerulean"
+                        android:textSize="@dimen/forgot_pass_text_size" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtStrNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_login_margin_top"
+                    android:layout_marginTop="@dimen/btn_login_margin_top"
+                    android:fontFamily="@font/proxima_nova_semibold"
+                    android:text="@string/str_notes"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="@dimen/assigned_topic_text_size" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/crdEbooks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/activity_horizontal_margin">
+
+                        <ImageView
+                            android:id="@+id/imgStudyMaterialType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/str_class_material_icon_desc"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_books_stack" />
+
+                        <TextView
+                            android:id="@+id/txtStudyMaterialTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/home_row_margin_bottom"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textColor="@color/colorDarkGray"
+                            android:textSize="@dimen/forgot_pass_text_size"
+                            app:layout_constraintLeft_toRightOf="@+id/imgStudyMaterialType"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/home_row_margin_bottom"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintLeft_toLeftOf="@+id/txtStudyMaterialTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/txtStudyMaterialTitle">
+
+                            <!--  <WebView
+                                 android:id="@+id/wvClassContent"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginTop="@dimen/home_row_margin_bottom" />
+
+                               <ImageView
+                                    android:id="@+id/imgStudyContentPic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/class_details_image_height"
+                                    android:layout_marginTop="@dimen/home_row_margin_bottom"
+                                    android:contentDescription="@string/str_class_material_content_icon_desc"
+                                    android:visibility="gone" /> -->
+
+                            <tm.charlie.expandabletextview.ExpandableTextView
+                                android:id="@+id/txtClassMaterialContent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/home_row_margin_bottom"
+                                android:ellipsize="none"
+                                android:fadingEdgeLength="40dp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:gravity="start"
+                                android:requiresFadingEdge="vertical"
+                                android:textColor="@color/colorSuperDarkGray"
+                                android:textSize="@dimen/home_row_title_text_size"
+                                app:etv_animationDuration="200"
+                                app:etv_collapsedLines="5" />
+
+                            <TextView
+                                android:id="@+id/txtViewMore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/txt_view_more_margin_top"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="@string/str_view_more"
+                                android:textColor="@color/colorLightBlue"
+                                android:textSize="@dimen/forgot_pass_text_size" />
+
+
+                        </LinearLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/attachContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp"></LinearLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBarClassDetails"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/classes_details_button_container_height"
+        android:layout_gravity="bottom"
+        android:background="@color/colorSuperDarkGray"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/text_margin"
+        android:paddingStart="@dimen/text_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/class_details_top_bottom_padding"
+            android:paddingTop="@dimen/class_details_top_bottom_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnDownloadClass"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45"
+                android:background="@drawable/left_curved_button"
+                android:fontFamily="@font/proxima_nova_semibold"
+                android:text="@string/str_download"
+                android:textAllCaps="@bool/bool_false_value"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_get_started_text_size" />
+
+            <Button
+                android:id="@+id/btnCoveredClass"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45"
+                android:background="@drawable/right_curved_button"
+                android:fontFamily="@font/proxima_nova_semibold"
+                android:text="@string/str_covered"
+                android:textAllCaps="@bool/bool_false_value"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_get_started_text_size" />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.com.android.ihsteachers">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".utils.volley.BackendVolley"
+        android:allowBackup="true"
+        android:icon="@mipmap/ihs_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".welcome.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".main.activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".login.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".main.activity.AssignedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".login.activity.ForgotPasswordActivity"
+            android:parentActivityName=".login.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.activity.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".main.activity.ContactAdminActivity"
+            android:label="Message"
+            android:parentActivityName=".main.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.ClassDetailsActivity"
+            android:parentActivityName=".main.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity android:name=".main.activity.TermsResultFilterActivity" />
+        <activity
+            android:name=".main.activity.CoveredSoFarActivity"
+            android:label="Covered Classes"
+            android:parentActivityName=".main.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.AssignedSubjectActivity"
+            android:label="Assigned Subjects"
+            android:parentActivityName=".main.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.ClassesActivity"
+            android:label="Classes"
+            android:parentActivityName=".main.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.ChangePasswordActivity"
+            android:label="Change Password"
+            android:parentActivityName=".main.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.ViewDocActivity"
+            android:label="View Document"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.VideoViewActivity"
+            android:label="View Video"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity android:name=".main.activity.GroupedClassesActivity"
+            android:label="Time Table"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".notifications.MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1022951609619",
+    "firebase_url": "https://api-project-ihsteachersstemapp.firebaseio.com",
+    "project_id": "api-project-ihsteachersstemapp",
+    "storage_bucket": "api-project-ihsteachersstemapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022951609619:android:d6e32065e38ed59a",
+        "android_client_info": {
+          "package_name": "app.com.android.ihsteachers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022951609619-mfggefgpt77r3i91hac0628gdt0cjgr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX9CIwIkhjNQRIKZwf8c_fAcSPCa9tIVM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

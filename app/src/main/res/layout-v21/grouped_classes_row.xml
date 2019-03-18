@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/text_margin"
+    android:paddingStart="@dimen/text_margin"
+    android:paddingTop="@dimen/home_card_bottom_margin">
+
+
+    <LinearLayout
+        android:id="@+id/classGroupRow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/class_group_row_height"
+        android:background="@drawable/shadow_curved_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingBottom="2dp">
+
+        <LinearLayout
+            android:id="@+id/colorBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_background_button"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/home_row_padding_end"
+                android:paddingStart="@dimen/text_margin">
+
+                <TextView
+                    android:id="@+id/txtClassGroupTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/proxima_nova_semibold"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="@dimen/edit_profile_title_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgDirection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/str_dashboard_icon_desc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_round_right_arrow" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

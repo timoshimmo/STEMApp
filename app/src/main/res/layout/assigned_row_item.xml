@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rowButtonAssign"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingBottom="@dimen/assign_row_margin_top"
+    android:paddingTop="@dimen/assign_row_margin_top">
+
+    <ImageView
+        android:id="@+id/imgAssignRowIcon"
+        android:layout_width="@dimen/assign_row_image_size"
+        android:layout_height="@dimen/assign_row_image_size"
+        app:srcCompat="@drawable/read_hand_book" />
+
+    <LinearLayout
+        android:id="@+id/assignItemsContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/home_top_layout_padding"
+        android:paddingStart="@dimen/home_top_layout_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imgAssignRowIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtTermName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:text="@string/str_term_title_example"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="@dimen/input_text_size" />
+
+        <TextView
+            android:id="@+id/txtTermStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="@string/str_dynamic_value"
+            android:textColor="@color/colorLightBlue"
+            android:textSize="@dimen/btn_get_started_text_size" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

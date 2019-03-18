@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/timetableRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/time_table_list_header_padding"
+    android:paddingEnd="@dimen/time_table_list_header_padding"
+    android:paddingStart="@dimen/time_table_list_header_padding">
+
+
+    <LinearLayout
+        android:id="@+id/timeDurationContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/timetable_class_details_height"
+        android:layout_marginEnd="@dimen/list_header_days_margin_right"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtClassDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_regular_font"
+            android:gravity="center_vertical"
+            android:text="08:00 - 09:00"
+            android:textColor="@color/colorMidGray"
+            android:textSize="@dimen/tab_day_of_week_text_size"
+            app:layout_constraintEnd_toStartOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardClassDataBox"
+        android:layout_width="@dimen/timetable_class_details_width"
+        android:layout_height="@dimen/timetable_class_details_height"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="@dimen/cardCurvedRadius"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/itemRowBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/text_margin"
+                android:paddingStart="@dimen/text_margin">
+
+                <TextView
+                    android:id="@+id/txtSubjectName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light_font"
+                    android:text="@string/str_subject_example"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/home_row_title_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtTopicName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_medium_font"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="@string/str_topic"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/home_row_title_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSubjectName" />
+
+                <TextView
+                    android:id="@+id/txtClassName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular_font"
+                    android:text="@string/str_class_name"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/home_row_title_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTopicName" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</android.widget.LinearLayout>
